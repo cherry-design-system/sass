@@ -2,6 +2,10 @@
 	"name": "cherry-sass",
 	"version": "0.0.1",
 	"description": "Cherry for Sass",
+	"author": "Luan Gjokaj <luan@riangle.com>",
+	"homepage": "https://cherry.design",
+	"repository": "https://github.com/cherry-design-system/sass",
+	"license": "MIT",
 	"keywords": [
 		"cherry",
 		"sass",
@@ -10,14 +14,10 @@
 		"design",
 		"design system"
 	],
-	"homepage": "https://cherry.design",
-	"repository": "https://github.com/cherry-design-system/sass",
 	"scripts": {
 		"dev": "gulp dev",
 		"build": "gulp build"
 	},
-	"author": "Luan Gjokaj (https://www.riangle.com)",
-	"license": "MIT",
 	"dependencies": {
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^7.0.1",
