@@ -285,7 +285,7 @@ input[type="submit"],
   border: solid 2px #F43F5E;
   color: #FFF;
   box-shadow: 0 0 0 0 #FDA4AF; }
-  @media (992px) {
+  @media (min-width: 992px) {
     button,
     input[type="submit"],
     .button {
@@ -296,7 +296,7 @@ input[type="submit"],
   .button.big {
     font-size: 16px;
     line-height: 1; }
-    @media (992px) {
+    @media (min-width: 992px) {
       button.big,
       input[type="submit"].big,
       .button.big {
@@ -458,7 +458,7 @@ select {
   background: #FFF;
   font-size: 12px;
   line-height: 1; }
-  @media (992px) {
+  @media (min-width: 992px) {
     input,
     textarea,
     select {
@@ -492,7 +492,7 @@ select {
   select.big {
     font-size: 16px;
     line-height: 1; }
-    @media (992px) {
+    @media (min-width: 992px) {
       input.big,
       textarea.big,
       select.big {
@@ -587,6 +587,9 @@ input[type="radio"] {
 
 select {
   background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxNiAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIgMkw4IDhMMTQgMiIgc3Ryb2tlPSIjMEVBNUU5IiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K) no-repeat #FFF;
-  background-position: calc(100% - 15px) center; }
+  background-position: calc(100% - 15px) center;
+  min-height: 51px; }
+  select.big {
+    min-height: 55px; }
 
 /*# sourceMappingURL=cherry.css.map */

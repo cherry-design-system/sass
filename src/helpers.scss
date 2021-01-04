@@ -23,7 +23,7 @@
 	font-size: $size-button-mobile;
 	line-height: $lineheight-button-mobile;
 
-	@media ($screen-lg) {
+	@media (min-width: $screen-lg) {
 		font-size: $size-button-desktop;
 		line-height: $lineheight-button-desktop;
 	}
@@ -33,7 +33,7 @@
 	font-size: $size-button-big-mobile;
 	line-height: $lineheight-button-big-mobile;
 
-	@media ($screen-lg) {
+	@media (min-width: $screen-lg) {
 		font-size: $size-button-big-desktop;
 		line-height: $lineheight-button-big-desktop;
 	}
@@ -43,7 +43,7 @@
 	font-size: $size-lead-mobile;
 	line-height: $lineheight-lead-mobile;
 
-	@media ($screen-lg) {
+	@media (min-width: $screen-lg) {
 		font-size: $size-lead-desktop;
 		line-height: $lineheight-lead-desktop;
 	}
@@ -53,7 +53,7 @@
 	font-size: $size-input-mobile;
 	line-height: $lineheight-input-mobile;
 
-	@media ($screen-lg) {
+	@media (min-width: $screen-lg) {
 		font-size: $size-input-desktop;
 		line-height: $lineheight-input-desktop;
 	}
@@ -63,7 +63,7 @@
 	font-size: $size-input-big-mobile;
 	line-height: $lineheight-input-big-mobile;
 
-	@media ($screen-lg) {
+	@media (min-width: $screen-lg) {
 		font-size: $size-input-big-desktop;
 		line-height: $lineheight-input-big-desktop;
 	}
