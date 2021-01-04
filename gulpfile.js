@@ -16,7 +16,7 @@ function stylesDev() {
 		.pipe(sourcemaps.init())
 		.pipe(sass({ includePaths: "node_modules" }).on("error", sass.logError))
 		.pipe(sourcemaps.write("."))
-		.pipe(dest("./dist/bundle.css"));
+		.pipe(dest("./dist"));
 }
 exports.dev = series(stylesDev, startWatching);
 
@@ -32,7 +32,7 @@ function stylesBuild() {
 			})
 		)
 		.pipe(cssnano())
-		.pipe(dest("./dist/bundle.css"));
+		.pipe(dest("./dist"));
 }
 
 exports.build = series(stylesBuild);

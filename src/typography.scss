@@ -48,6 +48,7 @@ h6 {
 	}
 }
 
+h1,
 .h1 {
 	font-size: $size-h1-mobile;
 	line-height: $lineheight-h1-mobile;
@@ -58,6 +59,7 @@ h6 {
 	}
 }
 
+h2,
 .h2 {
 	font-size: $size-h2-mobile;
 	line-height: $lineheight-h2-mobile;
@@ -68,6 +70,7 @@ h6 {
 	}
 }
 
+h3,
 .h3 {
 	font-size: $size-h3-mobile;
 	line-height: $lineheight-h3-mobile;
@@ -78,6 +81,7 @@ h6 {
 	}
 }
 
+h4,
 .h4 {
 	font-size: $size-h4-mobile;
 	line-height: $lineheight-h4-mobile;
@@ -88,6 +92,7 @@ h6 {
 	}
 }
 
+h5,
 .h5 {
 	font-size: $size-h5-mobile;
 	line-height: $lineheight-h5-mobile;
@@ -98,12 +103,13 @@ h6 {
 	}
 }
 
-.h5 {
-	font-size: $size-h5-mobile;
-	line-height: $lineheight-h5-mobile;
+h6,
+.h6 {
+	font-size: $size-h6-mobile;
+	line-height: $lineheight-h6-mobile;
 
 	@media (min-width: $screen-lg) {
-		font-size: $size-h5-desktop;
-		line-height: $lineheight-h5-desktop;
+		font-size: $size-h6-desktop;
+		line-height: $lineheight-h6-desktop;
 	}
 }
