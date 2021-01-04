@@ -1,0 +1,40 @@
+@mixin reset-button {
+	appearance: none;
+	background: none;
+	border: none;
+	border-radius: 0;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+}
+
+@mixin reset-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+@mixin button-font {
+	font-size: $size-button-mobile;
+	line-height: $lineheight-button-mobile;
+
+	@media ($screen-lg) {
+		font-size: $size-button-desktop;
+		line-height: $lineheight-button-desktop;
+	}
+}
+
+@mixin button-font-big {
+	font-size: $size-button-big-mobile;
+	line-height: $lineheight-button-big-mobile;
+
+	@media ($screen-lg) {
+		font-size: $size-button-big-desktop;
+		line-height: $lineheight-button-big-desktop;
+	}
+}

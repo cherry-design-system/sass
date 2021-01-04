@@ -1,0 +1,164 @@
+button,
+input[type="submit"],
+.button {
+	@include reset-button;
+	@include button-font;
+	display: inline-block;
+	vertical-align: middle;
+
+	&.big {
+		@include button-font-big;
+	}
+
+	padding: 15px 25px;
+	border-radius: 100px;
+	font-weight: 600;
+	background: $color-primary;
+	border: solid 2px $color-primary;
+	color: $color-light;
+	box-shadow: 0 0 0 0 $color-primary-light;
+
+	@media (hover: hover) {
+		&:hover:not([disabled]) {
+			color: $color-light;
+			background: $color-primary-dark;
+			border-color: $color-primary-dark;
+		}
+	}
+
+	&:focus:not([disabled]) {
+		box-shadow: 0 0 0 4px $color-primary-light;
+	}
+
+	&:active:not([disabled]) {
+		box-shadow: 0 0 0 2px $color-primary-light;
+	}
+
+	&.frame {
+		background: transparent;
+		border: solid 2px $color-primary;
+		color: $color-primary;
+		box-shadow: 0 0 0 0 $color-primary-light;
+
+		@media (hover: hover) {
+			&:hover:not([disabled]) {
+				background: transparent;
+				border: solid 2px $color-primary-dark;
+				color: $color-primary-dark;
+			}
+		}
+
+		&:focus:not([disabled]) {
+			box-shadow: 0 0 0 4px $color-primary-light;
+		}
+
+		&:active:not([disabled]) {
+			box-shadow: 0 0 0 2px $color-primary-light;
+		}
+	}
+
+	&.secondary {
+		background: $color-secondary;
+		border: solid 2px $color-secondary;
+		color: $color-light;
+		box-shadow: 0 0 0 0 $color-secondary-light;
+
+		@media (hover: hover) {
+			&:hover:not([disabled]) {
+				color: $color-light;
+				background: $color-secondary-dark;
+				border-color: $color-secondary-dark;
+			}
+		}
+
+		&:focus:not([disabled]) {
+			box-shadow: 0 0 0 4px $color-secondary-light;
+		}
+
+		&:active:not([disabled]) {
+			box-shadow: 0 0 0 2px $color-secondary-light;
+		}
+
+		&.frame {
+			background: transparent;
+			border: solid 2px $color-secondary;
+			color: $color-secondary;
+			box-shadow: 0 0 0 0 $color-secondary-light;
+
+			@media (hover: hover) {
+				&:hover:not([disabled]) {
+					background: transparent;
+					border: solid 2px $color-secondary-dark;
+					color: $color-secondary-dark;
+				}
+			}
+
+			&:focus:not([disabled]) {
+				box-shadow: 0 0 0 4px $color-secondary-light;
+			}
+
+			&:active:not([disabled]) {
+				box-shadow: 0 0 0 2px $color-secondary-light;
+			}
+		}
+	}
+
+	&.tertiary {
+		background: $color-tertiary;
+		border: solid 2px $color-tertiary;
+		color: $color-light;
+		box-shadow: 0 0 0 0 $color-tertiary-light;
+
+		@media (hover: hover) {
+			&:hover:not([disabled]) {
+				color: $color-light;
+				background: $color-tertiary-dark;
+				border-color: $color-tertiary-dark;
+			}
+		}
+
+		&:focus:not([disabled]) {
+			box-shadow: 0 0 0 4px $color-tertiary-light;
+		}
+
+		&:active:not([disabled]) {
+			box-shadow: 0 0 0 2px $color-tertiary-light;
+		}
+
+		&.frame {
+			background: transparent;
+			border: solid 2px $color-tertiary;
+			color: $color-tertiary;
+			box-shadow: 0 0 0 0 $color-tertiary-light;
+
+			@media (hover: hover) {
+				&:hover:not([disabled]) {
+					background: transparent;
+					border: solid 2px $color-tertiary-dark;
+					color: $color-tertiary-dark;
+				}
+			}
+
+			&:focus:not([disabled]) {
+				box-shadow: 0 0 0 4px $color-tertiary-light;
+			}
+
+			&:active:not([disabled]) {
+				box-shadow: 0 0 0 2px $color-tertiary-light;
+			}
+		}
+	}
+
+	&:disabled {
+		background: $color-gray-light;
+		border-color: $color-gray-light;
+		color: $color-gray;
+		cursor: not-allowed;
+
+		&.frame {
+			border: solid 2px $color-gray-light;
+			color: $color-gray;
+			cursor: not-allowed;
+		}
+	}
+}

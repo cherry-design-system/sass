@@ -1,0 +1,109 @@
+.hero1,
+.hero2,
+.hero3,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-head;
+	font-weight: 800;
+	margin: 0;
+}
+
+.hero1 {
+	font-size: $size-hero1-mobile;
+	line-height: $lineheight-hero1-mobile;
+
+	@media (min-width: $screen-lg) {
+		font-size: $size-hero1-desktop;
+		line-height: $lineheight-hero1-desktop;
+	}
+}
+
+.hero2 {
+	font-size: $size-hero2-mobile;
+	line-height: $lineheight-hero2-mobile;
+
+	@media (min-width: $screen-lg) {
+		font-size: $size-hero2-desktop;
+		line-height: $lineheight-hero2-desktop;
+	}
+}
+
+.hero3 {
+	font-size: $size-hero3-mobile;
+	line-height: $lineheight-hero3-mobile;
+
+	@media (min-width: $screen-lg) {
+		font-size: $size-hero3-desktop;
+		line-height: $lineheight-hero3-desktop;
+	}
+}
+
+.h1 {
+	font-size: $size-h1-mobile;
+	line-height: $lineheight-h1-mobile;
+
+	@media (min-width: $screen-lg) {
+		font-size: $size-h1-desktop;
+		line-height: $lineheight-h1-desktop;
+	}
+}
+
+.h2 {
+	font-size: $size-h2-mobile;
+	line-height: $lineheight-h2-mobile;
+
+	@media (min-width: $screen-lg) {
+		font-size: $size-h2-desktop;
+		line-height: $lineheight-h2-desktop;
+	}
+}
+
+.h3 {
+	font-size: $size-h3-mobile;
+	line-height: $lineheight-h3-mobile;
+
+	@media (min-width: $screen-lg) {
+		font-size: $size-h3-desktop;
+		line-height: $lineheight-h3-desktop;
+	}
+}
+
+.h4 {
+	font-size: $size-h4-mobile;
+	line-height: $lineheight-h4-mobile;
+
+	@media (min-width: $screen-lg) {
+		font-size: $size-h4-desktop;
+		line-height: $lineheight-h4-desktop;
+	}
+}
+
+.h5 {
+	font-size: $size-h5-mobile;
+	line-height: $lineheight-h5-mobile;
+
+	@media (min-width: $screen-lg) {
+		font-size: $size-h5-desktop;
+		line-height: $lineheight-h5-desktop;
+	}
+}
+
+.h5 {
+	font-size: $size-h5-mobile;
+	line-height: $lineheight-h5-mobile;
+
+	@media (min-width: $screen-lg) {
+		font-size: $size-h5-desktop;
+		line-height: $lineheight-h5-desktop;
+	}
+}
