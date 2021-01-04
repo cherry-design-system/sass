@@ -128,6 +128,16 @@ a {
 p {
 	color: $color-gray;
 	margin: 10px 0;
+
+	a {
+		color: $color-primary;
+	
+		@media (hover: hover) {
+			&:hover {
+				color: $color-primary-dark;
+			}
+		}
+	}
 }
 
 figure {
