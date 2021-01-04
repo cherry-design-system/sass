@@ -15,6 +15,11 @@ function stylesDev() {
 	return src("./src/cherry.scss")
 		.pipe(sourcemaps.init())
 		.pipe(sass({ includePaths: "node_modules" }).on("error", sass.logError))
+		.pipe(
+			autoprefixer({
+				cascade: false,
+			})
+		)
 		.pipe(sourcemaps.write("."))
 		.pipe(dest("./dist"));
 }

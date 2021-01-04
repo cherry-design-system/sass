@@ -2,12 +2,12 @@ button,
 input[type="submit"],
 .button {
 	@include reset-button;
-	@include button-font;
+	@include font-button;
 	display: inline-block;
 	vertical-align: middle;
 
 	&.big {
-		@include button-font-big;
+		@include font-button-big;
 	}
 
 	padding: 15px 25px;

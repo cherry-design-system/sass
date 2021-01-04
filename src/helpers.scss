@@ -19,7 +19,7 @@
 	}
 }
 
-@mixin button-font {
+@mixin font-button {
 	font-size: $size-button-mobile;
 	line-height: $lineheight-button-mobile;
 
@@ -29,12 +29,42 @@
 	}
 }
 
-@mixin button-font-big {
+@mixin font-button-big {
 	font-size: $size-button-big-mobile;
 	line-height: $lineheight-button-big-mobile;
 
 	@media ($screen-lg) {
 		font-size: $size-button-big-desktop;
 		line-height: $lineheight-button-big-desktop;
+	}
+}
+
+@mixin font-lead {
+	font-size: $size-lead-mobile;
+	line-height: $lineheight-lead-mobile;
+
+	@media ($screen-lg) {
+		font-size: $size-lead-desktop;
+		line-height: $lineheight-lead-desktop;
+	}
+}
+
+@mixin font-input {
+	font-size: $size-input-mobile;
+	line-height: $lineheight-input-mobile;
+
+	@media ($screen-lg) {
+		font-size: $size-input-desktop;
+		line-height: $lineheight-input-desktop;
+	}
+}
+
+@mixin font-input-big {
+	font-size: $size-input-big-mobile;
+	line-height: $lineheight-input-big-mobile;
+
+	@media ($screen-lg) {
+		font-size: $size-input-big-desktop;
+		line-height: $lineheight-input-big-desktop;
 	}
 }
