@@ -1,0 +1,26 @@
+.container {
+	margin: auto;
+	width: 100%;
+	padding: 0 $margin-container-mobile;
+	max-width: $max-width;
+
+	@media (min-width: $screen-lg) {
+		padding: 0 $margin-container-desktop;
+	}
+
+	&.fluid {
+		max-width: $max-width-limit;
+	}
+}
+
+.text-align-right {
+	text-align: right;
+}
+
+.text-align-center {
+	text-align: center;
+}
+
+.text-align-left {
+	text-align: left;
+}

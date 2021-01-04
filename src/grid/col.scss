@@ -1,0 +1,550 @@
+@mixin col {
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	flex-basis: 0;
+	flex-grow: 1;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
+@mixin col-auto {
+	@include col;
+	flex: 0 0 auto;
+	width: auto;
+	max-width: none;
+}
+
+@mixin col1 {
+	@include col;
+	flex: 0 0 8.333333%;
+	max-width: 8.333333%;
+}
+
+@mixin col2 {
+	@include col;
+	flex: 0 0 16.666667%;
+	max-width: 16.666667%;
+}
+
+@mixin col3 {
+	@include col;
+	flex: 0 0 25%;
+	max-width: 25%;
+}
+
+@mixin col4 {
+	@include col;
+	flex: 0 0 33.333333%;
+	max-width: 33.333333%;
+}
+
+@mixin col5 {
+	@include col;
+	flex: 0 0 41.666667%;
+	max-width: 41.666667%;
+}
+
+@mixin col6 {
+	@include col;
+	flex: 0 0 50%;
+	max-width: 50%;
+}
+
+@mixin col7 {
+	@include col;
+	flex: 0 0 58.333333%;
+	max-width: 58.333333%;
+}
+
+@mixin col8 {
+	@include col;
+	flex: 0 0 66.666667%;
+	max-width: 66.666667%;
+}
+
+@mixin col9 {
+	@include col;
+	flex: 0 0 75%;
+	max-width: 75%;
+}
+
+@mixin col10 {
+	@include col;
+	flex: 0 0 83.333333%;
+	max-width: 83.333333%;
+}
+
+@mixin col11 {
+	@include col;
+	flex: 0 0 91.666667%;
+	max-width: 91.666667%;
+}
+
+@mixin col12 {
+	@include col;
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+
+.col-1 {
+	@include col1;
+}
+
+.col-2 {
+	@include col2;
+}
+
+.col-3 {
+	@include col3;
+}
+
+.col-4 {
+	@include col4;
+}
+
+.col-5 {
+	@include col5;
+}
+
+.col-6 {
+	@include col6;
+}
+
+.col-7 {
+	@include col7;
+}
+
+.col-8 {
+	@include col8;
+}
+
+.col-9 {
+	@include col9;
+}
+
+.col-10 {
+	@include col10;
+}
+
+.col-11 {
+	@include col11;
+}
+
+.col-12 {
+	@include col12;
+}
+
+.col-order-first {
+	order: -1;
+}
+
+.col-order-last {
+	order: 13;
+}
+
+@media (min-width: $screen-xs) {
+	.col-xs-1 {
+		@include col1;
+	}
+
+	.col-xs-2 {
+		@include col2;
+	}
+
+	.col-xs-3 {
+		@include col3;
+	}
+
+	.col-xs-4 {
+		@include col4;
+	}
+
+	.col-xs-5 {
+		@include col5;
+	}
+
+	.col-xs-6 {
+		@include col6;
+	}
+
+	.col-xs-7 {
+		@include col7;
+	}
+
+	.col-xs-8 {
+		@include col8;
+	}
+
+	.col-xs-9 {
+		@include col9;
+	}
+
+	.col-xs-10 {
+		@include col10;
+	}
+
+	.col-xs-11 {
+		@include col11;
+	}
+
+	.col-xs-12 {
+		@include col12;
+	}
+
+	.col-xs-order-first {
+		order: -1;
+	}
+
+	.col-xs-order-last {
+		order: 13;
+	}
+}
+
+@media (min-width: $screen-sm) {
+	.col-sm-1 {
+		@include col1;
+	}
+
+	.col-sm-2 {
+		@include col2;
+	}
+
+	.col-sm-3 {
+		@include col3;
+	}
+
+	.col-sm-4 {
+		@include col4;
+	}
+
+	.col-sm-5 {
+		@include col5;
+	}
+
+	.col-sm-6 {
+		@include col6;
+	}
+
+	.col-sm-7 {
+		@include col7;
+	}
+
+	.col-sm-8 {
+		@include col8;
+	}
+
+	.col-sm-9 {
+		@include col9;
+	}
+
+	.col-sm-10 {
+		@include col10;
+	}
+
+	.col-sm-11 {
+		@include col11;
+	}
+
+	.col-sm-12 {
+		@include col12;
+	}
+
+	.col-sm-order-first {
+		order: -1;
+	}
+
+	.col-sm-order-last {
+		order: 13;
+	}
+}
+
+@media (min-width: $screen-md) {
+	.col-md-1 {
+		@include col1;
+	}
+
+	.col-md-2 {
+		@include col2;
+	}
+
+	.col-md-3 {
+		@include col3;
+	}
+
+	.col-md-4 {
+		@include col4;
+	}
+
+	.col-md-5 {
+		@include col5;
+	}
+
+	.col-md-6 {
+		@include col6;
+	}
+
+	.col-md-7 {
+		@include col7;
+	}
+
+	.col-md-8 {
+		@include col8;
+	}
+
+	.col-md-9 {
+		@include col9;
+	}
+
+	.col-md-10 {
+		@include col10;
+	}
+
+	.col-md-11 {
+		@include col11;
+	}
+
+	.col-md-12 {
+		@include col12;
+	}
+
+	.col-md-order-first {
+		order: -1;
+	}
+
+	.col-md-order-last {
+		order: 13;
+	}
+}
+
+@media (min-width: $screen-lg) {
+	.col-lg-1 {
+		@include col1;
+	}
+
+	.col-lg-2 {
+		@include col2;
+	}
+
+	.col-lg-3 {
+		@include col3;
+	}
+
+	.col-lg-4 {
+		@include col4;
+	}
+
+	.col-lg-5 {
+		@include col5;
+	}
+
+	.col-lg-6 {
+		@include col6;
+	}
+
+	.col-lg-7 {
+		@include col7;
+	}
+
+	.col-lg-8 {
+		@include col8;
+	}
+
+	.col-lg-9 {
+		@include col9;
+	}
+
+	.col-lg-10 {
+		@include col10;
+	}
+
+	.col-lg-11 {
+		@include col11;
+	}
+
+	.col-lg-12 {
+		@include col12;
+	}
+
+	.col-lg-order-first {
+		order: -1;
+	}
+
+	.col-lg-order-last {
+		order: 13;
+	}
+}
+
+@media (min-width: $screen-xl) {
+	.col-xl-1 {
+		@include col1;
+	}
+
+	.col-xl-2 {
+		@include col2;
+	}
+
+	.col-xl-3 {
+		@include col3;
+	}
+
+	.col-xl-4 {
+		@include col4;
+	}
+
+	.col-xl-5 {
+		@include col5;
+	}
+
+	.col-xl-6 {
+		@include col6;
+	}
+
+	.col-xl-7 {
+		@include col7;
+	}
+
+	.col-xl-8 {
+		@include col8;
+	}
+
+	.col-xl-9 {
+		@include col9;
+	}
+
+	.col-xl-10 {
+		@include col10;
+	}
+
+	.col-xl-11 {
+		@include col11;
+	}
+
+	.col-xl-12 {
+		@include col12;
+	}
+
+	.col-xl-order-first {
+		order: -1;
+	}
+
+	.col-xl-order-last {
+		order: 13;
+	}
+}
+
+@media (min-width: $screen-xxl) {
+	.col-xxl-1 {
+		@include col1;
+	}
+
+	.col-xxl-2 {
+		@include col2;
+	}
+
+	.col-xxl-3 {
+		@include col3;
+	}
+
+	.col-xxl-4 {
+		@include col4;
+	}
+
+	.col-xxl-5 {
+		@include col5;
+	}
+
+	.col-xxl-6 {
+		@include col6;
+	}
+
+	.col-xxl-7 {
+		@include col7;
+	}
+
+	.col-xxl-8 {
+		@include col8;
+	}
+
+	.col-xxl-9 {
+		@include col9;
+	}
+
+	.col-xxl-10 {
+		@include col10;
+	}
+
+	.col-xxl-11 {
+		@include col11;
+	}
+
+	.col-xxl-12 {
+		@include col12;
+	}
+
+	.col-xxl-order-first {
+		order: -1;
+	}
+
+	.col-xxl-order-last {
+		order: 13;
+	}
+}
+
+@media (min-width: $screen-xxxl) {
+	.col-xxxl-1 {
+		@include col1;
+	}
+
+	.col-xxxl-2 {
+		@include col2;
+	}
+
+	.col-xxxl-3 {
+		@include col3;
+	}
+
+	.col-xxxl-4 {
+		@include col4;
+	}
+
+	.col-xxxl-5 {
+		@include col5;
+	}
+
+	.col-xxxl-6 {
+		@include col6;
+	}
+
+	.col-xxxl-7 {
+		@include col7;
+	}
+
+	.col-xxxl-8 {
+		@include col8;
+	}
+
+	.col-xxxl-9 {
+		@include col9;
+	}
+
+	.col-xxxl-10 {
+		@include col10;
+	}
+
+	.col-xxxl-11 {
+		@include col11;
+	}
+
+	.col-xxxl-12 {
+		@include col12;
+	}
+
+	.col-xxxl-order-first {
+		order: -1;
+	}
+
+	.col-xxxl-order-last {
+		order: 13;
+	}
+}
