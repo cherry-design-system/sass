@@ -177,15 +177,15 @@ table {
 	width: 100%;
 	border-collapse: collapse;
 
-	& th,
-	& td {
+	th,
+	td {
 		text-align: left;
 		border-bottom: solid 1px $color-gray-light;
 		padding: 5px 20px 5px 0;
 		white-space: nowrap;
 	}
 
-	& th {
+	th {
 		font-size: $size-button-mobile;
 
 		@media (min-width: $screen-lg) {
@@ -193,7 +193,7 @@ table {
 		}
 	}
 
-	& td {
+	td {
 		font-size: $size-text-mobile;
 		color: $color-gray;
 
