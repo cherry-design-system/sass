@@ -135,6 +135,10 @@
 	@include col12;
 }
 
+.col-auto {
+	@include col-auto;
+}
+
 .col-order-first {
 	order: -1;
 }
@@ -190,6 +194,10 @@
 
 	.col-xs-12 {
 		@include col12;
+	}
+
+	.col-xs-auto {
+		@include col-auto;
 	}
 
 	.col-xs-order-first {
@@ -250,6 +258,10 @@
 		@include col12;
 	}
 
+	.col-sm-auto {
+		@include col-auto;
+	}
+
 	.col-sm-order-first {
 		order: -1;
 	}
@@ -306,6 +318,10 @@
 
 	.col-md-12 {
 		@include col12;
+	}
+
+	.col-md-auto {
+		@include col-auto;
 	}
 
 	.col-md-order-first {
@@ -366,6 +382,10 @@
 		@include col12;
 	}
 
+	.col-lg-auto {
+		@include col-auto;
+	}
+
 	.col-lg-order-first {
 		order: -1;
 	}
@@ -422,6 +442,10 @@
 
 	.col-xl-12 {
 		@include col12;
+	}
+
+	.col-xl-auto {
+		@include col-auto;
 	}
 
 	.col-xl-order-first {
@@ -482,6 +506,10 @@
 		@include col12;
 	}
 
+	.col-xxl-auto {
+		@include col-auto;
+	}
+
 	.col-xxl-order-first {
 		order: -1;
 	}
@@ -538,6 +566,10 @@
 
 	.col-xxxl-12 {
 		@include col12;
+	}
+
+	.col-xxxl-auto {
+		@include col-auto;
 	}
 
 	.col-xxxl-order-first {
