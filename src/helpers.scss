@@ -19,6 +19,26 @@
 	}
 }
 
+@mixin font-eyebrow {
+	font-size: $size-eyebrow-mobile;
+	line-height: $lineheight-eyebrow-mobile;
+
+	@media (min-width: $screen-lg) {
+		font-size: $size-eyebrow-desktop;
+		line-height: $lineheight-eyebrow-desktop;
+	}
+}
+
+@mixin font-subtitle {
+	font-size: $size-subtitle-mobile;
+	line-height: $lineheight-subtitle-mobile;
+
+	@media (min-width: $screen-lg) {
+		font-size: $size-subtitle-desktop;
+		line-height: $lineheight-subtitle-desktop;
+	}
+}
+
 @mixin font-button {
 	font-size: $size-button-mobile;
 	line-height: $lineheight-button-mobile;

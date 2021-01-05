@@ -113,3 +113,31 @@ h6,
 		line-height: $lineheight-h6-desktop;
 	}
 }
+
+.font-style-eyebrow {
+	@include font-eyebrow;
+}
+
+.font-style-subtitle {
+	@include font-subtitle;
+}
+
+.font-style-button {
+	@include font-button;
+}
+
+.font-style-button-big {
+	@include font-button-big;
+}
+
+.font-style-lead {
+	@include font-lead;
+}
+
+.font-style-input {
+	@include font-input;
+}
+
+.font-style-input-big {
+	@include font-input-big;
+}
