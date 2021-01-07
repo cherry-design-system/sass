@@ -9,6 +9,7 @@ body {
 
 body {
 	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 	font-family: $font-text;
 	font-size: $size-text-mobile;
