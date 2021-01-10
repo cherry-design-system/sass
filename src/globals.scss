@@ -127,7 +127,6 @@ a {
 }
 
 p {
-	color: $color-gray;
 	margin: 10px 0;
 
 	a {
@@ -139,6 +138,13 @@ p {
 			}
 		}
 	}
+}
+
+blockquote,
+p,
+ol,
+ul {
+	color: $color-gray;
 }
 
 figure {
