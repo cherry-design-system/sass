@@ -5,6 +5,8 @@ input[type="submit"],
 	@include font-button;
 	display: inline-block;
 	vertical-align: middle;
+	white-space: nowrap;
+	hyphens: auto;
 
 	&.big {
 		@include font-button-big;
