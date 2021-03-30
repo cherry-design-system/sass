@@ -14,6 +14,6 @@ For help, discussion about best practices, or any other conversation that would 
 
 [Discuss Cherry-Sass on GitHub](https://github.com/cherry-design-system/sass/discussions)
 
-For casual chit-chat with others using Nextify:
+For casual chit-chat with others using Cherry:
 
 [Join the Discord Server](https://discord.com/invite/uQFdMddMZw)
