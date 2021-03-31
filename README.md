@@ -5,7 +5,9 @@ A design system to build the web.
 ---
 
 # Cherry for Sass
+
 ## Documentation
+
 For full documentation, visit https://cherry.design.
 
 ## Community
