@@ -155,12 +155,39 @@ select {
 	}
 }
 
+.radio-check-wrapper {
+	position: relative;
+	display: inline-block;
+	line-height: 1;
+
+	& input {
+		vertical-align: top;
+	}
+
+	&.big {
+		& label {
+			max-width: calc(100% - 50px);
+			margin-top: 3px;
+		}
+	}
+
+	& label {
+		max-width: calc(100% - 40px);
+		margin-top: -2px;
+	}
+}
+
 label {
 	color: $color-gray;
 	display: inline-block;
 	vertical-align: middle;
 	padding: 0;
 	margin: 0;
+	line-height: $lineheight-text-mobile;
+
+	@media (min-width: $screen-xl) {
+		line-height: $lineheight-text-desktop;
+	}
 
 	&.error {
 		color: $color-error;
