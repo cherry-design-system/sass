@@ -185,7 +185,7 @@ label {
 	margin: 0;
 	line-height: $lineheight-text-mobile;
 
-	@media (min-width: $screen-xl) {
+	@media (min-width: $screen-lg) {
 		line-height: $lineheight-text-desktop;
 	}
 
