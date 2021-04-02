@@ -12,6 +12,10 @@ input[type="submit"],
 		@include font-button-big;
 	}
 
+	&.full-width {
+		width: 100%;
+	}
+
 	padding: 15px 25px;
 	border-radius: 100px;
 	font-weight: 600;
@@ -165,6 +169,3 @@ input[type="submit"],
 	}
 }
 
-.full-width {
-	width: 100%;
-}
