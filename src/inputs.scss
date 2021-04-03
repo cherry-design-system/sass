@@ -72,7 +72,8 @@ input[type="radio"] {
 	height: 22px;
 	display: inline-block;
 	position: relative;
-	margin-right: 3px;
+	cursor: pointer;
+	font-size: 0;
 
 	&.big {
 		width: 32px;
@@ -160,12 +161,13 @@ select {
 
 .radio-check-wrapper {
 	position: relative;
-	display: block;
+	display: flex;
 	width: 100%;
 	line-height: 1;
 
 	& input {
 		vertical-align: top;
+		cursor: pointer;
 	}
 
 	&.big {
@@ -178,6 +180,7 @@ select {
 	& label {
 		max-width: calc(100% - 40px);
 		margin-top: -1px;
+		padding: 0 0 0 10px;
 	}
 }
 
@@ -185,8 +188,8 @@ label {
 	color: $color-gray;
 	display: inline-block;
 	vertical-align: middle;
-	padding: 0 7px 0 0;
-	margin: 0;
+	padding: 0 10px 0 0;
+	margin: auto 0;
 	line-height: $lineheight-text-mobile;
 
 	@media (min-width: $screen-lg) {
