@@ -91,7 +91,7 @@ input[type="checkbox"] {
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate3d(0,0,0) translate(-50%, -50%) scale(0.7);
+		transform: translate3d(0, 0, 0) translate(-50%, -50%) scale(0.7);
 		opacity: 0;
 		pointer-events: none;
 		transition: all 0.3s ease;
@@ -125,7 +125,7 @@ input[type="radio"] {
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate3d(0,0,0) translate(-50%, -50%) scale(0.7);
+		transform: translate3d(0, 0, 0) translate(-50%, -50%) scale(0.7);
 		border-radius: 50%;
 		opacity: 0;
 		pointer-events: none;
@@ -252,6 +252,11 @@ label {
 		width: 100%;
 		height: 100%;
 		outline: none;
+
+		&:after {
+			content: none;
+			display: none;
+		}
 	}
 
 	& input:checked ~ .toggle-input-slider {
@@ -346,8 +351,11 @@ label {
 		}
 	}
 
-	&.big {
-		& .toggle-input-slider {
+	& input.big {
+		width: 100%;
+		height: 100%;
+
+		& ~ .toggle-input-slider {
 			height: 32px;
 			width: 56px;
 
@@ -355,6 +363,163 @@ label {
 				width: 32px;
 				height: 32px;
 			}
+		}
+	}
+}
+
+input[type="range"] {
+	padding: 0;
+	height: 10px;
+	font-size: 0;
+	min-width: 130px;
+	box-shadow: none;
+	border: none;
+
+	&::-webkit-slider-runnable-track {
+		width: 100%;
+		height: 10px;
+		cursor: pointer;
+		background: $color-gray-light;
+		border-radius: 25px;
+		border: 2px solid $color-gray-light;
+		transition: all 0.3s ease;
+		box-shadow: 0 0 0 0 $color-secondary-light;
+	}
+
+	&::-webkit-slider-thumb {
+		@include reset-button;
+		border: 0 solid transparent;
+		height: 22px;
+		width: 22px;
+		border-radius: 50%;
+		background: $color-secondary;
+		cursor: pointer;
+		margin-top: -8px;
+		box-shadow: 0 0 0 0 $color-secondary-light;
+		transition: all 0.3s ease;
+	}
+
+	&::-moz-range-track {
+		width: 100%;
+		height: 6px;
+		cursor: pointer;
+		background: $color-gray-light;
+		border-radius: 25px;
+		border: 2px solid $color-gray-light;
+		transition: all 0.3s ease;
+		box-shadow: 0 0 0 0 $color-secondary-light;
+	}
+
+	&::-moz-range-thumb {
+		border: 0 solid transparent;
+		height: 22px;
+		width: 22px;
+		border-radius: 50%;
+		background: $color-secondary;
+		cursor: pointer;
+		box-shadow: 0 0 0 0 $color-secondary-light;
+		transition: all 0.3s ease;
+	}
+
+	@media (hover: hover) {
+		&:hover:not([disabled]) {
+			&::-webkit-slider-runnable-track {
+				border-color: $color-secondary;
+			}
+
+			&::-moz-range-track {
+				border-color: $color-secondary;
+			}
+		}
+	}
+
+	&:focus:not([disabled]) {
+		box-shadow: none;
+
+		&::-webkit-slider-runnable-track {
+			border-color: $color-secondary;
+			background: $color-gray-light;
+			box-shadow: 0 0 0 4px $color-secondary-light;
+		}
+
+		&::-webkit-slider-thumb {
+			border-color: $color-gray-light;
+			box-shadow: 0 0 0 4px $color-secondary-light;
+			outline: none;
+		}
+
+		&::-moz-range-track {
+			border-color: $color-secondary;
+			box-shadow: 0 0 0 4px $color-secondary-light;
+		}
+
+		&::-moz-range-thumb {
+			border-color: $color-gray-light;
+			box-shadow: 0 0 0 4px $color-secondary-light;
+			outline: none;
+		}
+	}
+
+	&:active:not([disabled]) {
+		box-shadow: none;
+
+		&::-webkit-slider-runnable-track {
+			box-shadow: 0 0 0 2px $color-secondary-light;
+		}
+
+		&::-webkit-slider-thumb {
+			box-shadow: 0 0 0 2px $color-secondary-light;
+		}
+
+		&::-moz-range-track {
+			box-shadow: 0 0 0 2px $color-secondary-light;
+		}
+
+		&::-moz-range-thumb {
+			box-shadow: 0 0 0 2px $color-secondary-light;
+		}
+	}
+
+	&.big {
+		min-width: 200px;
+
+		&::-webkit-slider-runnable-track {
+			height: 14px;
+		}
+
+		&::-webkit-slider-thumb {
+			width: 32px;
+			height: 32px;
+			margin-top: -11px;
+		}
+
+		&::-moz-range-track {
+			height: 10px
+		}
+	
+		&::-moz-range-thumb {
+			width: 32px;
+			height: 32px;
+		}
+	}
+
+	&:disabled {
+		&::-webkit-slider-runnable-track {
+			cursor: not-allowed;
+		}
+
+		&::-webkit-slider-thumb {
+			background: $color-gray;
+			cursor: not-allowed;
+		}
+
+		&::-moz-range-track {
+			cursor: not-allowed;
+		}
+	
+		&::-moz-range-thumb {
+			background: $color-gray;
+			cursor: not-allowed;
 		}
 	}
 }
