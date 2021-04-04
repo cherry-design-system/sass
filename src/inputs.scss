@@ -187,11 +187,11 @@ label {
 .toggle-input-wrapper {
 	position: relative;
 	display: inline-flex;
-	width: 100%;
 	line-height: 1;
 
 	&.full-width {
 		display: flex;
+		width: 100%;
 	}
 
 	& input {
