@@ -203,15 +203,23 @@ label {
 		& label {
 			max-width: calc(100% - 40px);
 			min-width: calc(100% - 32px);
-			margin-top: 4px;
+			margin-top: 5px;
+
+			@media (min-width: $screen-lg) {
+				margin-top: 4px;
+			}
 		}
 	}
 
 	& label {
 		max-width: calc(100% - 30px);
 		min-width: calc(100% - 22px);
-		margin-top: -1px;
+		margin-top: 0;
 		padding: 0 0 0 10px;
+
+		@media (min-width: $screen-lg) {
+			margin-top: -1px;
+		}
 	}
 }
 
