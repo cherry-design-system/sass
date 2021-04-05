@@ -382,6 +382,7 @@ input[type="range"] {
 	min-width: 130px;
 	box-shadow: none;
 	border: none;
+	height: 22px;
 
 	&::-webkit-slider-runnable-track {
 		width: 100%;
@@ -490,6 +491,7 @@ input[type="range"] {
 
 	&.big {
 		min-width: 200px;
+		height: 32px;
 
 		&::-webkit-slider-runnable-track {
 			height: 14px;
@@ -512,6 +514,9 @@ input[type="range"] {
 	}
 
 	&:disabled {
+		background: transparent;
+		border-color: transparent;
+
 		&::-webkit-slider-runnable-track {
 			cursor: not-allowed;
 			background: $color-gray-light;
