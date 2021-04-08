@@ -580,3 +580,21 @@
 		order: 13;
 	}
 }
+
+.full-screen {
+	@media (min-width: $screen-lg) {
+		height: calc(100vh - $padding-top-body-desktop);
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
+}
+
+.sticky {
+	@media (min-width: $screen-lg) {
+		position: sticky;
+		top: $padding-top-body-desktop;
+		max-height: calc(100vh - $padding-top-body-desktop);
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+}
