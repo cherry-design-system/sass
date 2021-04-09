@@ -1,7 +1,4 @@
-.row {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+@mixin gutter-default {
 	margin-right: $margin-row-default;
 	margin-left: $margin-row-default;
 
@@ -9,258 +6,137 @@
 		padding-right: $gutter-col-default;
 		padding-left: $gutter-col-default;
 	}
+}
 
-	&.gutter-default {
-		margin-right: $margin-row-default;
-		margin-left: $margin-row-default;
+@mixin gutter-medium {
+	margin-right: $margin-row-medium;
+	margin-left: $margin-row-medium;
 
-		& > * {
-			padding-right: $gutter-col-default;
-			padding-left: $gutter-col-default;
-		}
+	& > * {
+		padding-right: $gutter-col-medium;
+		padding-left: $gutter-col-medium;
 	}
+}
+
+@mixin gutter-big {
+	margin-right: $margin-row-big;
+	margin-left: $margin-row-big;
+
+	& > * {
+		padding-right: $gutter-col-big;
+		padding-left: $gutter-col-big;
+	}
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	@include gutter-default;
 
 	&.gutter-medium {
-		margin-right: $margin-row-medium;
-		margin-left: $margin-row-medium;
-
-		& > * {
-			padding-right: $gutter-col-medium;
-			padding-left: $gutter-col-medium;
-		}
+		@include gutter-medium;
 	}
 
 	&.gutter-big {
-		margin-right: $margin-row-big;
-		margin-left: $margin-row-big;
-
-		& > * {
-			padding-right: $gutter-col-big;
-			padding-left: $gutter-col-big;
-		}
+		@include gutter-big;
 	}
 
 	@media (min-width: $screen-xs) {
 		&.gutter-xs-default {
-			margin-right: $margin-row-default;
-			margin-left: $margin-row-default;
-
-			& > * {
-				padding-right: $gutter-col-default;
-				padding-left: $gutter-col-default;
-			}
+			@include gutter-default;
 		}
 
 		&.gutter-xs-medium {
-			margin-right: $margin-row-medium;
-			margin-left: $margin-row-medium;
-
-			& > * {
-				padding-right: $gutter-col-medium;
-				padding-left: $gutter-col-medium;
-			}
+			@include gutter-medium;
 		}
 
 		&.gutter-xs-big {
-			margin-right: $margin-row-big;
-			margin-left: $margin-row-big;
-
-			& > * {
-				padding-right: $gutter-col-big;
-				padding-left: $gutter-col-big;
-			}
+			@include gutter-big;
 		}
 	}
 
 	@media (min-width: $screen-sm) {
 		&.gutter-sm-default {
-			margin-right: $margin-row-default;
-			margin-left: $margin-row-default;
-
-			& > * {
-				padding-right: $gutter-col-default;
-				padding-left: $gutter-col-default;
-			}
+			@include gutter-default;
 		}
 
 		&.gutter-sm-medium {
-			margin-right: $margin-row-medium;
-			margin-left: $margin-row-medium;
-
-			& > * {
-				padding-right: $gutter-col-medium;
-				padding-left: $gutter-col-medium;
-			}
+			@include gutter-medium;
 		}
 
 		&.gutter-sm-big {
-			margin-right: $margin-row-big;
-			margin-left: $margin-row-big;
-
-			& > * {
-				padding-right: $gutter-col-big;
-				padding-left: $gutter-col-big;
-			}
+			@include gutter-big;
 		}
 	}
 
 	@media (min-width: $screen-md) {
 		&.gutter-md-default {
-			margin-right: $margin-row-default;
-			margin-left: $margin-row-default;
-
-			& > * {
-				padding-right: $gutter-col-default;
-				padding-left: $gutter-col-default;
-			}
+			@include gutter-default;
 		}
 
 		&.gutter-md-medium {
-			margin-right: $margin-row-medium;
-			margin-left: $margin-row-medium;
-
-			& > * {
-				padding-right: $gutter-col-medium;
-				padding-left: $gutter-col-medium;
-			}
+			@include gutter-medium;
 		}
 
 		&.gutter-md-big {
-			margin-right: $margin-row-big;
-			margin-left: $margin-row-big;
-
-			& > * {
-				padding-right: $gutter-col-big;
-				padding-left: $gutter-col-big;
-			}
+			@include gutter-big;
 		}
 	}
 
 	@media (min-width: $screen-lg) {
 		&.gutter-lg-default {
-			margin-right: $margin-row-default;
-			margin-left: $margin-row-default;
-
-			& > * {
-				padding-right: $gutter-col-default;
-				padding-left: $gutter-col-default;
-			}
+			@include gutter-default;
 		}
 
 		&.gutter-lg-medium {
-			margin-right: $margin-row-medium;
-			margin-left: $margin-row-medium;
-
-			& > * {
-				padding-right: $gutter-col-medium;
-				padding-left: $gutter-col-medium;
-			}
+			@include gutter-medium;
 		}
 
 		&.gutter-lg-big {
-			margin-right: $margin-row-big;
-			margin-left: $margin-row-big;
-
-			& > * {
-				padding-right: $gutter-col-big;
-				padding-left: $gutter-col-big;
-			}
+			@include gutter-big;
 		}
 	}
 
 	@media (min-width: $screen-xl) {
 		&.gutter-xl-default {
-			margin-right: $margin-row-default;
-			margin-left: $margin-row-default;
-
-			& > * {
-				padding-right: $gutter-col-default;
-				padding-left: $gutter-col-default;
-			}
+			@include gutter-default;
 		}
 
 		&.gutter-xl-medium {
-			margin-right: $margin-row-medium;
-			margin-left: $margin-row-medium;
-
-			& > * {
-				padding-right: $gutter-col-medium;
-				padding-left: $gutter-col-medium;
-			}
+			@include gutter-medium;
 		}
 
 		&.gutter-xl-big {
-			margin-right: $margin-row-big;
-			margin-left: $margin-row-big;
-
-			& > * {
-				padding-right: $gutter-col-big;
-				padding-left: $gutter-col-big;
-			}
+			@include gutter-big;
 		}
 	}
 
 	@media (min-width: $screen-xxl) {
 		&.gutter-xxl-default {
-			margin-right: $margin-row-default;
-			margin-left: $margin-row-default;
-
-			& > * {
-				padding-right: $gutter-col-default;
-				padding-left: $gutter-col-default;
-			}
+			@include gutter-default;
 		}
 
 		&.gutter-xxl-medium {
-			margin-right: $margin-row-medium;
-			margin-left: $margin-row-medium;
-
-			& > * {
-				padding-right: $gutter-col-medium;
-				padding-left: $gutter-col-medium;
-			}
+			@include gutter-medium;
 		}
 
 		&.gutter-xxl-big {
-			margin-right: $margin-row-big;
-			margin-left: $margin-row-big;
-
-			& > * {
-				padding-right: $gutter-col-big;
-				padding-left: $gutter-col-big;
-			}
+			@include gutter-big;
 		}
 	}
 
 	@media (min-width: $screen-xxxl) {
 		&.gutter-xxxl-default {
-			margin-right: $margin-row-default;
-			margin-left: $margin-row-default;
-
-			& > * {
-				padding-right: $gutter-col-default;
-				padding-left: $gutter-col-default;
-			}
+			@include gutter-default;
 		}
 
 		&.gutter-xxxl-medium {
-			margin-right: $margin-row-medium;
-			margin-left: $margin-row-medium;
-
-			& > * {
-				padding-right: $gutter-col-medium;
-				padding-left: $gutter-col-medium;
-			}
+			@include gutter-medium;
 		}
 
 		&.gutter-xxxl-big {
-			margin-right: $margin-row-big;
-			margin-left: $margin-row-big;
-
-			& > * {
-				padding-right: $gutter-col-big;
-				padding-left: $gutter-col-big;
-			}
+			@include gutter-big;
 		}
 	}
 }
