@@ -1,0 +1,24 @@
+label {
+	color: $color-gray;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 10px 0 0;
+	margin: auto 0;
+	line-height: $lineheight-text-mobile;
+
+	@media (min-width: $screen-lg) {
+		line-height: $lineheight-text-desktop;
+	}
+
+	&.error {
+		color: $color-error;
+	}
+
+	&.success {
+		color: $color-success;
+	}
+
+	&.full-width {
+		width: 100%;
+	}
+}

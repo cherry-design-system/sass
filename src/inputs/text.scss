@@ -1,0 +1,158 @@
+@mixin primary-select {
+	background-image: url("data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjE2IiBoZWlnaHQ9IjEwIiB2aWV3Qm94PSIwIDAgMTYgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yIDJMOCA4TDE0IDIiIHN0cm9rZT0iI0Y0M0Y1RSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==");
+	background-repeat: no-repeat;
+	background-color: $color-light;
+	background-position: calc(100% - 15px) center;
+	background-size: 16px;
+}
+
+@mixin secondary-select {
+	background-image: url("data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjE2IiBoZWlnaHQ9IjEwIiB2aWV3Qm94PSIwIDAgMTYgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yIDJMOCA4TDE0IDIiIHN0cm9rZT0iIzBFQTVFOSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==");
+	background-repeat: no-repeat;
+	background-color: $color-light;
+	background-position: calc(100% - 15px) center;
+	background-size: 16px;
+}
+
+@mixin tertiary-select {
+	background-image: url("data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjE2IiBoZWlnaHQ9IjEwIiB2aWV3Qm94PSIwIDAgMTYgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yIDJMOCA4TDE0IDIiIHN0cm9rZT0iI0E4NTVGNyIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==");
+	background-repeat: no-repeat;
+	background-color: $color-light;
+	background-position: calc(100% - 15px) center;
+	background-size: 16px;
+}
+
+@mixin gray-select {
+	background-image: url("data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjE2IiBoZWlnaHQ9IjEwIiB2aWV3Qm94PSIwIDAgMTYgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yIDJMOCA4TDE0IDIiIHN0cm9rZT0iIzlDQTNBRiIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==");
+	background-repeat: no-repeat;
+	background-color: $color-light;
+	background-position: calc(100% - 15px) center;
+	background-size: 16px;
+}
+
+input,
+textarea,
+select {
+	appearance: none;
+	transition: all 0.3s ease;
+	line-height: 1;
+	vertical-align: middle;
+	margin: 0;
+	font-family: $font-text;
+	border-radius: 6px;
+	border: solid 2px $color-gray-light;
+	padding: 15px 15px;
+	background: $color-light;
+	@include font-input;
+
+	@media (hover: hover) {
+		&:hover:not([disabled]) {
+			border-color: $color-secondary-light;
+
+			&.primary {
+				border-color: $color-primary-light;
+			}
+
+			&.tertiary {
+				border-color: $color-tertiary-light;
+			}
+		}
+	}
+
+	&:focus:not([disabled]) {
+		outline: none;
+		box-shadow: 0 0 0 4px $color-secondary-light;
+		border-color: $color-secondary;
+
+		&.primary {
+			box-shadow: 0 0 0 4px $color-primary-light;
+			border-color: $color-primary;
+		}
+
+		&.tertiary {
+			box-shadow: 0 0 0 4px $color-tertiary-light;
+			border-color: $color-tertiary;
+		}
+	}
+
+	&:active:not([disabled]) {
+		box-shadow: 0 0 0 2px $color-secondary-light;
+
+		&.primary {
+			box-shadow: 0 0 0 2px $color-primary-light;
+		}
+
+		&.tertiary {
+			box-shadow: 0 0 0 2px $color-tertiary-light;
+		}
+	}
+
+	&:disabled {
+		background: $color-gray-light;
+		border-color: $color-gray;
+		color: $color-gray;
+		cursor: not-allowed;
+		opacity: 0.9;
+	}
+
+	&.big {
+		@include font-input-big;
+	}
+
+	&.full-width {
+		width: 100%;
+	}
+}
+
+input[type="text"],
+input[type="number"],
+input[type="phone"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+	display: inline-block;
+	box-shadow: 0 0 0 0 $color-secondary-light;
+
+	&.primary {
+		box-shadow: 0 0 0 0 $color-primary-light;
+	}
+
+	&.tertiary {
+		box-shadow: 0 0 0 0 $color-tertiary-light;
+	}
+
+	&.error {
+		border-color: $color-error;
+	}
+
+	&.success {
+		border-color: $color-success;
+	}
+}
+
+select {
+	min-height: 51px;
+	padding-right: 40px;
+
+	@include secondary-select;
+
+	&.primary {
+		@include primary-select;
+	}
+
+	&.tertiary {
+		@include tertiary-select;
+	}
+
+	&:disabled {
+		@include gray-select;
+	}
+
+	background-position: calc(100% - 15px) center;
+	background-size: 16px;
+
+	&.big {
+		min-height: 55px;
+	}
+}

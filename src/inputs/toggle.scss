@@ -1,0 +1,229 @@
+.toggle-input-wrapper {
+	& .toggle-input-inner {
+		margin-top: 0;
+		vertical-align: top;
+	}
+
+	&.big {
+		& label {
+			max-width: calc(100% - 70px);
+			min-width: calc(100% - 56px);
+		}
+	}
+
+	& label {
+		max-width: calc(100% - 60px);
+		min-width: calc(100% - 46px);
+	}
+}
+
+.toggle-input-inner {
+	display: inline-block;
+	margin: auto 0;
+	position: relative;
+	vertical-align: middle;
+
+	& * {
+		vertical-align: middle;
+	}
+
+	& input {
+		@include reset-button;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		outline: none;
+
+		&:after {
+			content: none;
+			display: none;
+		}
+	}
+
+	& input:checked ~ .toggle-input-slider {
+		&:before {
+			max-width: 46px;
+		}
+
+		&:after {
+			transform: translate3d(0, 0, 0) translateX(23px);
+		}
+	}
+
+	& input:focus:not([disabled]) {
+		border: none;
+		box-shadow: none;
+
+		& ~ .toggle-input-slider {
+			outline: none;
+		}
+	}
+
+	& input:active {
+		box-shadow: none;
+	}
+
+	& input:disabled {
+		cursor: not-allowed;
+	}
+
+	& input:disabled ~ .toggle-input-slider {
+		border-color: $color-gray;
+
+		&:before {
+			background: $color-gray-light;
+		}
+
+		&:after {
+			background: $color-gray;
+		}
+	}
+
+	& .toggle-input-slider {
+		border: solid 2px $color-gray-light;
+		border-radius: 30px;
+		background: $color-light;
+		pointer-events: none;
+		transition: all 0.3s ease;
+		height: 22px;
+		width: 46px;
+
+		&:before,
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+		}
+
+		&:before {
+			top: 5px;
+			left: 5px;
+			width: calc(100% - 10px);
+			height: calc(100% - 10px);
+			max-width: 0;
+			border-radius: 30px;
+			transition: all 0.3s ease;
+			background: $color-light;
+		}
+
+		&:after {
+			left: 0;
+			top: 0;
+			border-radius: 50%;
+			transition: all 0.3s ease;
+			transform: translate3d(0, 0, 0) translateX(0);
+			width: 22px;
+			height: 22px;
+		}
+	}
+
+	& input.big {
+		width: 100%;
+		height: 100%;
+
+		& ~ .toggle-input-slider {
+			height: 32px;
+			width: 56px;
+
+			&:after {
+				width: 32px;
+				height: 32px;
+			}
+		}
+	}
+
+	& input {
+		&:checked {
+			& ~ .toggle-input-slider {
+				&:before {
+					background: $color-secondary-light;
+				}
+			}
+
+			&.primary ~ .toggle-input-slider {
+				&:before {
+					background: $color-primary-light;
+				}
+			}
+
+			&.tertiary ~ .toggle-input-slider {
+				&:before {
+					background: $color-tertiary-light;
+				}
+			}
+		}
+
+		@media (hover: hover) {
+			&:hover:not([disabled]) {
+				& ~ .toggle-input-slider {
+					border-color: $color-secondary;
+				}
+
+				&.primary ~ .toggle-input-slider {
+					border-color: $color-primary;
+				}
+
+				&.tertiary ~ .toggle-input-slider {
+					border-color: $color-tertiary;
+				}
+			}
+		}
+
+		&:focus:not([disabled]) {
+			& ~ .toggle-input-slider {
+				border-color: $color-secondary;
+				box-shadow: 0 0 0 4px $color-secondary-light;
+			}
+
+			&.primary ~ .toggle-input-slider {
+				border-color: $color-primary;
+				box-shadow: 0 0 0 4px $color-primary-light;
+			}
+
+			&.tertiary ~ .toggle-input-slider {
+				border-color: $color-tertiary;
+				box-shadow: 0 0 0 4px $color-tertiary-light;
+			}
+		}
+
+		&:active:not([disabled]) {
+			& ~ .toggle-input-slider {
+				box-shadow: 0 0 0 2px $color-secondary-light;
+			}
+
+			&.primary ~ .toggle-input-slider {
+				box-shadow: 0 0 0 2px $color-primary-light;
+			}
+
+			&.tertiary ~ .toggle-input-slider {
+				box-shadow: 0 0 0 2px $color-tertiary-light;
+			}
+		}
+
+		& ~ .toggle-input-slider {
+			box-shadow: 0 0 0 0 $color-secondary-light;
+
+			&:after {
+				background: $color-secondary;
+			}
+		}
+
+		&.primary ~ .toggle-input-slider {
+			box-shadow: 0 0 0 0 $color-primary-light;
+
+			&:after {
+				background: $color-primary;
+			}
+		}
+
+		&.tertiary ~ .toggle-input-slider {
+			box-shadow: 0 0 0 0 $color-tertiary-light;
+
+			&:after {
+				background: $color-tertiary;
+			}
+		}
+	}
+}
