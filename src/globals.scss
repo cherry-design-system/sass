@@ -61,7 +61,17 @@ pre,
 code,
 kbd,
 samp {
-	font-family: monospace, monospace;
+	font-family: $font-mono;
+}
+
+code {
+	font-size: $size-code-mobile;
+	line-height: $lineheight-code-mobile;
+
+	@media (min-width: $screen-lg) {
+		font-size: $size-code-desktop;
+		line-height: $lineheight-code-desktop;
+	}
 }
 
 pre {

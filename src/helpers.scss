@@ -20,6 +20,7 @@
 }
 
 @mixin font-eyebrow {
+	font-family: $font-special;
 	font-size: $size-eyebrow-mobile;
 	line-height: $lineheight-eyebrow-mobile;
 	font-weight: 600;
