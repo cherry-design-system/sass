@@ -17,20 +17,6 @@ h6 {
 	font-weight: 800;
 	margin: 0;
 	position: relative;
-	z-index: -1;
-
-	&:before {
-		content: "";
-		display: block;
-		height: calc(#{$padding-top-body-mobile} + 10px);
-		margin: calc(-#{$padding-top-body-mobile} - 10px) 0 0;
-		pointer-events: none;
-
-		@media (min-width: $screen-lg) {
-			height: calc(#{$padding-top-body-desktop} + 10px);
-			margin: calc(-#{$padding-top-body-desktop} - 10px) 0 0;
-		}
-	}
 }
 
 .hero1 {
